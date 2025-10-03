@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleset name="Nmc Coding standards">
+  <description>Custom coding standards for Nmc</description>
+  <file>app/code/community/Nmc/VehicleInfo/</file>
+  <rule ref="PEAR">
+      <exclude name="PEAR.NamingConventions.ValidFunctionName"/>
+        <exclude name="PEAR.NamingConventions.ValidVariableName"/>
+        <exclude name="PEAR.Commenting.ClassComment"/>
+        <exclude name="PEAR.Commenting.FunctionComment"/>
+        <exclude name="PEAR.Commenting.FileComment"/>
+        <exclude name="PEAR.Commenting.InlineComment"/>
+        <exclude name="PEAR.WhiteSpace.ScopeIndent.IncorrectExact"/>
+    </rule>
+    <rule ref="Generic.CodeAnalysis">
+        <!-- should be fixed -->
+        <exclude name="Generic.CodeAnalysis.AssignmentInCondition.Found"/>
+        <!-- should be fixed -->
+        <exclude name="Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition"/>
+        <!-- should be fixed -->
+        <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedCatch"/>
+        <!-- should be fixed -->
+        <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedIf"/>
+        <!-- should be fixed -->
+        <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedElse"/>
+        <!-- should be fixed -->
+        <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedElseif"/>
+        <!-- should be fixed -->
+        <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedWhile"/>
+        <!-- should be reviewed -->
+        <exclude name="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed"/>
+        <!-- should be reviewed -->
+        <exclude name="Generic.CodeAnalysis.RequireExplicitBooleanOperatorPrecedence.MissingParentheses"/>
+        <!-- should be ignored - PHPMD -->
+        <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+        <!-- should be reviewed -->
+        <exclude name="Generic.CodeAnalysis.UselessOverridingMethod.Found"/>
+    </rule>
+    <rule ref="Generic.Commenting">
+        <exclude name="Generic.Commenting.DocComment"/>
+        <!-- should be reviewed -->
+        <exclude name="Generic.Commenting.Fixme.TaskFound"/>
+        <!-- should be reviewed -->
+        <exclude name="Generic.Commenting.Todo.CommentFound"/>
+        <!-- should be reviewed -->
+        <exclude name="Generic.Commenting.Todo.TaskFound"/>
+    </rule>
+    <rule ref="Generic.Metrics">
+        <!-- should be reviewed -->
+        <exclude name="Generic.Metrics.CyclomaticComplexity.MaxExceeded"/>
+        <!-- should be reviewed -->
+        <exclude name="Generic.Metrics.CyclomaticComplexity.TooHigh"/>
+        <!-- should be reviewed -->
+        <exclude name="Generic.Metrics.NestingLevel.MaxExceeded"/>
+        <!-- should be reviewed -->
+        <exclude name="Generic.Metrics.NestingLevel.TooHigh"/>
+    </rule>
+    <rule ref="Generic.Metrics">
+        <!-- should be ignored - PHPMD -->
+        <exclude name="Generic.PHP.NoSilencedErrors.Discouraged"/>
+    </rule>
+
+    <rule ref="Generic.Files.LineLength">
+      <properties>
+        <property name="lineLimit" value="100"/>
+        <property name="absoluteLineLimit" value="120"/>
+      </properties>
+    </rule>
+    <rule ref="Squiz.Functions.GlobalFunction">
+        <!-- should be ignored -->
+        <exclude name="Squiz.Functions.GlobalFunction.Found"/>
+    </rule>
+    <rule ref="Squiz.Operators.IncrementDecrementUsage">
+        <!-- should be ignored -->
+        <exclude name="Squiz.Operators.IncrementDecrementUsage.NoBrackets"/>
+    </rule>
+    <rule ref="Squiz.PHP.NonExecutableCode">
+        <!-- should be fixed -->
+        <exclude name="Squiz.PHP.NonExecutableCode.ReturnNotRequired"/>
+        <!-- should be fixed -->
+        <exclude name="Squiz.PHP.NonExecutableCode.Unreachable"/>
+    </rule>
+    <rule ref="Squiz.PHP.Eval">
+        <!-- should be reviewed -->
+        <exclude name="Squiz.PHP.Eval.Discouraged"/>
+    </rule>
+</ruleset>

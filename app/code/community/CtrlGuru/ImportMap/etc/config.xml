@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+  <modules>
+    <CtrlGuru_ImportMap>
+      <version>1.0.0</version>
+    </CtrlGuru_ImportMap>
+  </modules>
+  <global>
+    <blocks>
+      <ctrlguru_importmap>
+        <class>CtrlGuru_ImportMap_Block</class>
+      </ctrlguru_importmap>
+      <page>
+        <rewrite>
+          <html_head>CtrlGuru_ImportMap_Block_Html_Head</html_head>
+        </rewrite>
+      </page>
+    </blocks>
+    <models>
+      <ctrlguru_importmap>
+        <class>CtrlGuru_ImportMap_Model</class>
+      </ctrlguru_importmap>
+      <core>
+        <rewrite>
+          <design_package>CtrlGuru_ImportMap_Model_Design_Package</design_package>
+        </rewrite>
+      </core>
+    </models>
+    <helpers>
+      <ctrlguru_importmap>
+        <class>CtrlGuru_ImportMap_Helper</class>
+      </ctrlguru_importmap>
+    </helpers>
+  </global>
+</config>
