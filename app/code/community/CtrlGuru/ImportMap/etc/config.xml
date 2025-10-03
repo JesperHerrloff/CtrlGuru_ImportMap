@@ -15,6 +15,12 @@
           <html_head>CtrlGuru_ImportMap_Block_Html_Head</html_head>
         </rewrite>
       </page>
+      <adminhtml>
+        <rewrite>
+        
+          <page_head>CtrlGuru_ImportMap_Block_Adminhtml_Page_Head</page_head>
+        </rewrite>
+      </adminhtml>
     </blocks>
     <models>
       <ctrlguru_importmap>
